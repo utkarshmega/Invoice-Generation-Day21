@@ -25,9 +25,11 @@ public class CabServiceMethods {
 		for (CabData entry : details) {
 			fare += invoiceGenerator(entry.distance, entry.time);
 		}
-		System.out.println("****Invoice****");
+		double avgFare = fare/(details.size() * 1.0);
+		System.out.println("****Enhanced Invoice****");
+		System.out.println("Total Number of Rides : " +details.size());
 		System.out.println("Total Aggregate fare : Rs." + fare);
-
+		System.out.println("Average fare : Rs." + avgFare);
 	}
 
 }
