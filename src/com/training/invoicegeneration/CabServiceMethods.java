@@ -3,15 +3,20 @@ package com.training.invoicegeneration;
 import java.util.ArrayList;
 
 public class CabServiceMethods {
+	
+	private static int Costperkm = 10;
+	private static int costpermin = 1;
+	private static int minimumfare = 5;
+	
 
 	/*
 	 * to find the fare for the given time and distance
 	 */
 	public static int invoiceGenerator(int distance, int time) {
 		int total_fare;
-		total_fare = (10 * distance) + (time * 1);
-		if (total_fare < 5)
-			total_fare = 5;
+		total_fare = (Costperkm * distance) + (time * costpermin);
+		if (total_fare < minimumfare)
+			total_fare = minimumfare;
 		return total_fare;
 
 	}
