@@ -2,15 +2,17 @@ package com.training.invoicegeneration;
 
 import java.util.ArrayList;
 
+import com.training.cabenum.CabRideCostsEnum;
+
 public class CabServiceMethods {
 
-	private static int Costperkm_normal = 10;
-	private static int costpermin_normal = 1;
-	private static int minimumfare_normal = 5;
+	private static int Costperkm_normal = CabRideCostsEnum.Normal.costPerKm;
+	private static int costpermin_normal = CabRideCostsEnum.Normal.costPerMin;
+	private static int minimumfare_normal = CabRideCostsEnum.Normal.minimumFare;
 
-	private static int Costperkm_premium = 15;
-	private static int costpermin_premium = 2;
-	private static int minimumfare_premium = 20;
+	private static int Costperkm_premium = CabRideCostsEnum.Premium.costPerKm;
+	private static int costpermin_premium = CabRideCostsEnum.Premium.costPerMin;
+	private static int minimumfare_premium = CabRideCostsEnum.Premium.minimumFare;
 
 	/*
 	 * to find the fare for the given type of ride and given time and distance
